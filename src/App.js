@@ -4,7 +4,6 @@ import LoadingSpinner from "./shared/components/UIElements/LoadingSpinner";
 
 import { AuthContext } from "./shared/context/auth-context";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
-import Footer from "./pages/footer/components/Footer";
 
 import { useAuth } from "./shared/hooks/auth-hook";
 
@@ -24,6 +23,7 @@ const Auth = React.lazy(() => import("./user/pages/Auth"));
 
 const App = () => {
 	const { token, login, logout, userId } = useAuth();
+	const auth = useContext(AuthContext);
 
 	let routes = (
 		<Routes>
@@ -35,7 +35,7 @@ const App = () => {
 			<Route path="/contact" element={<ContactUs />} exact />
 			<Route path="/locations" element={<Locations />} exact />
 			<Route path="/prices" element={<Prices />} exact />
-			<Route path="/book" element={<Book />} exact />
+			<Route path="/book" element={auth.isLoggedIn ? <Book/> : <Auth />} exact />
 			<Route path="*" element={<Navigate to="/home" replace />} exact />
 			<Route path="/auth" element={<Auth />} exact />
 		</Routes>
