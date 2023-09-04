@@ -48,7 +48,9 @@ const NavLinks = ({ onLinkClick }) => {
 					(user) => user.id === userId
 				);
 				if (user.image) {
+					console.log("user image: ", user.imge)
 					setUserImage(user.image);
+
 				}
 			} catch (err) {
 				// Handle errors
@@ -60,7 +62,11 @@ const NavLinks = ({ onLinkClick }) => {
 		}
 	}, [auth.isLoggedIn, setUserImage, sendRequest, userImage, userId]);
 
-	let imageURL = `${process.env.REACT_APP_ASSET_URL}/${userImage}`;
+	let imageURL = `${process.env.REACT_APP_ASSET_URL}${userImage}`;
+
+	console.log("Image URL: ", imageURL);
+
+	console.log("dkjdshsdkj")
 
 	return (
 		<React.Fragment>
@@ -89,7 +95,7 @@ const NavLinks = ({ onLinkClick }) => {
 				<div
 					className={`dropdown ${showLinks ? "show" : ""}`}
 					onMouseEnter={toggleLinks}
-					// onMouseLeave={hideLinks}
+					onMouseLeave={hideLinks}
 				>
 					<div
 						className="dropdown-toggle navbar-links__a-link"
