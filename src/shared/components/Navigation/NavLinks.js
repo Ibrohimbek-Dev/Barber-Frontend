@@ -62,7 +62,7 @@ const NavLinks = ({ onLinkClick }) => {
 		}
 	}, [auth.isLoggedIn, setUserImage, sendRequest, userImage, userId]);
 
-	let imageURL = `${process.env.REACT_APP_ASSET_URL}${userImage}`;
+	let imageURL = `${process.env.REACT_APP_ASSET_URL}/${userImage}`;
 
 	console.log("Image URL: ", imageURL);
 
