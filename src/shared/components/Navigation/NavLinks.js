@@ -47,8 +47,7 @@ const NavLinks = ({ onLinkClick }) => {
 				const user = await responseData.users.find(
 					(user) => user.id === userId
 				);
-				if (user.image) {
-					console.log("user image: ", user.imge)
+				if (user.image) {					
 					setUserImage(user.image);
 
 				}
@@ -63,10 +62,6 @@ const NavLinks = ({ onLinkClick }) => {
 	}, [auth.isLoggedIn, setUserImage, sendRequest, userImage, userId]);
 
 	let imageURL = `${process.env.REACT_APP_ASSET_URL}/${userImage}`;
-
-	console.log("Image URL: ", imageURL);
-
-	console.log("dkjdshsdkj")
 
 	return (
 		<React.Fragment>
