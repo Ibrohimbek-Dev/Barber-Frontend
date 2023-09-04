@@ -1,0 +1,89 @@
+.locations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #78938a;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 3rem 0
+}
+
+.locations .section-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.map-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Reduced gap for responsiveness */
+  margin: 2rem; /* Added margin for better spacing */
+}
+
+.map-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Made the cards full width for responsiveness */
+  max-width: 300px; /* Added max-width to prevent cards from becoming too wide */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.map-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.map-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.location-details {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.location-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

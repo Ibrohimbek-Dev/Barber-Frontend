@@ -1,0 +1,63 @@
+.services-container {
+  padding: 1rem 0 0 0;  
+  background-color: #ffffea;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
+
+.services-container .section-title {
+  font-weight: bold;
+  text-align: center;
+  color: #003f5c;
+}
+
+.service {
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;  
+}
+
+.service img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);    
+}
+
+.service img:hover {
+  transform: scale(0.9);
+  transition: 1s;
+  cursor: pointer;
+}
+
+/* Animation */
+.service-title {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.service-title.animating {
+  animation: changeTitleColor 1s ease infinite;
+}
+
+/* Define the animation */
+@keyframes changeTitleColor {
+  0%, 100% {
+    color: #333;
+    transform: translateY(0);
+  }
+  50% {
+    color: #ffa500;
+    transform: translateY(-5px);
+  }
+}

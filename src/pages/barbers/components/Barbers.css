@@ -1,0 +1,81 @@
+.barbers-container {
+  padding: 1rem 0 0 0;
+}
+
+.barbers-container .section-title {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.barbers {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default: 1 column */
+  gap: 20px;
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  /* For screens with a minimum width of 768px */
+  .barbers {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 columns */
+  }
+}
+
+@media (min-width: 992px) {
+  /* For screens with a minimum width of 992px */
+  .barbers {
+    grid-template-columns: repeat(3, 1fr); /* Show 3 columns */
+  }
+}
+
+
+.barber-card {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.barber-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.barber-card img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.barber-card .barber-name {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.barber-card .barber-name:hover {
+  color: #476f95;
+  cursor: pointer;  
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
