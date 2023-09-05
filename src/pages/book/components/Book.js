@@ -28,6 +28,12 @@ const Book = () => {
 	const handleBookAppointment = () => {
 		// Handle booking appointment logic here
 		// You can use selectedTime or customTime as needed
+
+		if (auth.isLoggedIn) {
+			alert("book section is coming soon!");
+		} else {
+			navigate("/auth")
+		}
 	};
 
 	const elements = (
@@ -73,6 +79,8 @@ const Book = () => {
 							</p>
 						</div>
 					</div>
+					
+
 					<button
 						className="book-appointment-button"
 						onClick={handleBookAppointment}
