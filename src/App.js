@@ -22,19 +22,19 @@ const Prices = React.lazy(() => import("./pages/drop/components/Prices"));
 const Auth = React.lazy(() => import("./user/pages/Auth"));
 
 const App = () => {
-	const { token, login, logout, userId } = useAuth();	
+	const { token, login, logout, userId } = useAuth();		
 
 	let routes = (
 		<Routes>
 			<Route path="/home" element={<Home />} exact />
 			<Route path="/services" element={<Services />} exact />
 			<Route path="/barbers" element={<Barbers />} exact />
-			<Route path="/gallery" element={<Gallery />} exact />			
+			<Route path="/gallery" element={<Gallery />} exact />
 
 			<Route path="/contact" element={<ContactUs />} exact />
 			<Route path="/locations" element={<Locations />} exact />
 			<Route path="/prices" element={<Prices />} exact />
-			<Route path="/book" element={<Book/>} exact />
+			<Route path="/book" element={<Book />} exact />
 			<Route path="*" element={<Navigate to="/home" replace />} exact />
 			<Route path="/auth" element={<Auth />} exact />
 		</Routes>

@@ -179,7 +179,7 @@ const Auth = () => {
 					SWITCH TO {isLoginMode ? "SIGNUP" : "LOGIN"}
 				</Button>
 			</Card>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 };

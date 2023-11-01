@@ -28,6 +28,7 @@ const Home = () => {
 
 
 	const clickBookBtn = () => {
+		console.log(auth.isLoggedIn)
 		if (auth.isLoggedIn) {
 			navigate("/book");
 		} else {

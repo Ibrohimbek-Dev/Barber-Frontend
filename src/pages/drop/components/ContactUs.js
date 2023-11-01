@@ -6,7 +6,7 @@ const ContactUs = () => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
-	const [isLoggedIn, setIsLoggedIn] = useState(false); // Add this state
+	// const [isLoggedIn, setIsLoggedIn] = useState(false); // Add this state
 
 	const isFormValid = name !== "" && email !== "" && message !== "";
 
